@@ -22,6 +22,7 @@
 		E70B893D176C16D200641364 /* TimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E70B893C176C16D200641364 /* TimeViewController.xib */; };
 		E70B893F176C171100641364 /* TempViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E70B893E176C171100641364 /* TempViewController.xib */; };
 		E70B8941176C174D00641364 /* DistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E70B8940176C174D00641364 /* DistViewController.xib */; };
+		E7A86891176CCDD3002CC1BF /* image460x320.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A86890176CCDD3002CC1BF /* image460x320.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		E70B893C176C16D200641364 /* TimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeViewController.xib; sourceTree = "<group>"; };
 		E70B893E176C171100641364 /* TempViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TempViewController.xib; sourceTree = "<group>"; };
 		E70B8940176C174D00641364 /* DistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DistViewController.xib; sourceTree = "<group>"; };
+		E7A86890176CCDD3002CC1BF /* image460x320.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image460x320.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		E70B8909176BFB6D00641364 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E7A86890176CCDD3002CC1BF /* image460x320.jpg */,
 				E70B890A176BFB6D00641364 /* Unit Converter-Info.plist */,
 				E70B890B176BFB6D00641364 /* InfoPlist.strings */,
 				E70B890E176BFB6D00641364 /* main.m */,
@@ -182,6 +185,7 @@
 				E70B893D176C16D200641364 /* TimeViewController.xib in Resources */,
 				E70B893F176C171100641364 /* TempViewController.xib in Resources */,
 				E70B8941176C174D00641364 /* DistViewController.xib in Resources */,
+				E7A86891176CCDD3002CC1BF /* image460x320.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +315,7 @@
 				E70B891E176BFB6D00641364 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

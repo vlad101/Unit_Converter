@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TempViewController : UIViewController
-{}
+@interface TempViewController : UIViewController <UITextFieldDelegate>
+{
+    // The view objects.
+    IBOutlet UILabel *resultField;
+    IBOutlet UITextField *userInputTextField;
+    IBOutlet UIActivityIndicatorView *activityIndicator;
+}
 
-@property (strong, nonatomic) NSString *userInput;
+- (IBAction)showResult:(id)sender;
 
 @end
