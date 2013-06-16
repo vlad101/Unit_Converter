@@ -24,6 +24,9 @@
         
         // Set background image.
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"image460x320.jpg"]];
+        
+        // Put the image on the tab bar item
+        [tbi setFinishedSelectedImage:[UIImage imageNamed:@"temp_opt.jpg"]withFinishedUnselectedImage:[UIImage imageNamed:@"temp_opt.jpg"]];
     }
     return self;
 }

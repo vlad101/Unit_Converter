@@ -22,8 +22,11 @@
         // Give it a label
         [tbi setTitle:@"Time"];
         
-        // Set background image.
+        // Set a background image.
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"image460x320.jpg"]];
+        
+        // Put the image on the tab bar item
+        [tbi setFinishedSelectedImage:[UIImage imageNamed:@"time_opt.jpg"]withFinishedUnselectedImage:[UIImage imageNamed:@"time_opt.jpg"]];
     }
     return self;
 }
