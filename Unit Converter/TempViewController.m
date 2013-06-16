@@ -32,8 +32,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[self view] setBackgroundColor:[UIColor redColor]];
-    //[resultField setText:@"Hi!"];
+    //[[self view] setBackgroundColor:[UIColor redColor]];
+    
+    // Clear the textField, the X button
+    userInputTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
 }
 
 - (void)viewWillAppear:(BOOL)animated
