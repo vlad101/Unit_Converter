@@ -8,10 +8,6 @@
 
 #import "DistViewController.h"
 
-@interface DistViewController ()
-
-@end
-
 @implementation DistViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -26,19 +22,20 @@
         // Give it a label
         [tbi setTitle:@"Distance"];
         
-        // Create an image
+        // Set background image.
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"image460x320.jpg"]];
     }
     return self;
 }
 
+// Call the needed methods if needed [showTime]
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[self view] setBackgroundColor:[UIColor yellowColor]];
-    // Do any additional setup after loading the view from its nib.
+    [[self view] setBackgroundColor:[UIColor redColor]];
+    //[resultField setText:@"Hi!"];
 }
 
-// Call the needed methods if needed [showTime]
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -48,6 +45,95 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+}
+
+
+// Only allow numbers in the text field.
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    // Limit the user input to only 9 characters
+    NSUInteger newLength = [userInputTextField.text length] + [string length] - range.length;
+    return (newLength > 9) ? NO : YES;
+}
+
+- (IBAction)showResult:(id)sender
+{
+    // Activity indicator start animation
+    [activityIndicator startAnimating];
+    
+    // Display the result
+    NSString *str = [userInputTextField text];
+    double value = [str doubleValue];
+    [resultField setFont:[UIFont systemFontOfSize:18]];
+    [resultField setText:[NSString stringWithFormat:@"%.3f m = %.3f km!", value, (value / 1000)]];
+    
+    // Activity indicator stop animation
+    [activityIndicator stopAnimating];
+}
+
+// Remove the keyboard after entering the input.
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [[self view] endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
+}
+
+// Customize the behavior of the userInputTextField.
+// The method is called just before the text field becomes active
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    NSLog(@"textFieldShouldBeginEditing");
+    [textField setKeyboardType:UIKeyboardTypeDecimalPad];
+    // Change the background color of the text field indicating active text field.
+    [textField setBackgroundColor:[UIColor colorWithRed:220.0f/255.0f green:220.0f/255.0f blue:220.0f/255.0f alpha:1.0f]];
+    return YES;
+}
+
+// The method is called after the text field becomes active.
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    
+    NSLog(@"textFieldShouldBeginEditing");
+}
+
+// The method is called just before the text field becomes inactive
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    NSLog(@"textFieldShouldEndEditing");
+    
+    // Change the background color of the text field indicating inactive textField.
+    [textField setBackgroundColor:[UIColor whiteColor]];
+    return YES;
+}
+
+// The method is called after the text field becomes inactive.
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
+    NSLog(@"textFieldShouldEndEditing");
+}
+
+// The method is called when the user presses the clear button inside the text field.
+- (BOOL)textFieldShouldClear:(UITextField *)textField
+{
+    NSLog(@"textFieldShouldClear:");
+    return YES;
+}
+
+// The method is called when the user presses the return key on the keyboard.
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"textFieldShouldReturn");
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+    
+	//Clear the first responder
+	[userInputTextField resignFirstResponder];
 }
 
 @end

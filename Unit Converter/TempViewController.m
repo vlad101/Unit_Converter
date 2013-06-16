@@ -65,7 +65,7 @@
     NSString *str = [userInputTextField text];
     double value = [str doubleValue];
     [resultField setFont:[UIFont systemFontOfSize:18]];
-    [resultField setText:[NSString stringWithFormat:@"%.3f Celsius = %.3f Kelvin!", value, (value + 273)]];
+    [resultField setText:[NSString stringWithFormat:@"%.3f C = %.3f K!", value, (value + 273)]];
     
     // Activity indicator stop animation
     [activityIndicator stopAnimating];
@@ -127,5 +127,14 @@
     [textField resignFirstResponder];
     return YES;
 }
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+    
+	//Clear the first responder 
+	[userInputTextField resignFirstResponder];
+}
+
 
 @end

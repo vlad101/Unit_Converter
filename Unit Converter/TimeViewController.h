@@ -9,5 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface TimeViewController : UIViewController
+{
+    // The view objects.
+    IBOutlet UILabel *resultField;
+    IBOutlet UITextField *userInputTextField;
+    IBOutlet UIActivityIndicatorView *activityIndicator;
+}
+
+- (IBAction)showResult:(id)sender;
 
 @end
