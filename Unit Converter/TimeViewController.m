@@ -56,6 +56,12 @@
     return (newLength > 9) ? NO : YES;
 }
 
+- (IBAction)hideBar:(id)sender {
+}
+
+- (IBAction)showBar:(id)sender {
+}
+
 - (IBAction)showResult:(id)sender
 {
     // Activity indicator start animation
@@ -134,6 +140,60 @@
     
 	//Clear the first responder
 	[userInputTextField resignFirstResponder];
+}
+
+// Hide/Show tabBarController method implementations
+
+- (IBAction)showButton:(id)sender
+{
+    [self showTabBar:self.tabBarController];
+}
+
+- (IBAction)hideButton:(id)sender
+{
+    [self hideTabBar:self.tabBarController];
+}
+
+- (void)hideTabBar:(UITabBarController *) tabbarcontroller
+{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.5];
+    
+    for(UIView *view in tabbarcontroller.view.subviews)
+    {
+        if([view isKindOfClass:[UITabBar class]])
+        {
+            [view setFrame:CGRectMake(view.frame.origin.x, 480, view.frame.size.width, view.frame.size.height)];
+        }
+        else
+        {
+            [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, 480)];
+        }
+    }
+    
+    [UIView commitAnimations];
+}
+
+- (void)showTabBar:(UITabBarController *) tabbarcontroller
+{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.5];
+    for(UIView *view in tabbarcontroller.view.subviews)
+    {
+        NSLog(@"%@", view);
+        
+        if([view isKindOfClass:[UITabBar class]])
+        {
+            [view setFrame:CGRectMake(view.frame.origin.x, 431, view.frame.size.width, view.frame.size.height)];
+            
+        }
+        else
+        {
+            [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, 431)];
+        }
+    }
+    
+    [UIView commitAnimations];
 }
 
 @end

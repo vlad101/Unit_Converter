@@ -15,6 +15,9 @@
     IBOutlet UITextField *userInputTextField;
     IBOutlet UIActivityIndicatorView *activityIndicator;
 }
+- (IBAction)hideButton:(id)sender;
+
+- (IBAction)showButton:(id)sender;
 
 - (IBAction)showResult:(id)sender;
 
