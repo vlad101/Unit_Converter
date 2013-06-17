@@ -61,12 +61,6 @@
     return (newLength > 9) ? NO : YES;
 }
 
-- (IBAction)hideBar:(id)sender {
-}
-
-- (IBAction)showBar:(id)sender {
-}
-
 - (IBAction)showResult:(id)sender
 {
     // Activity indicator start animation
