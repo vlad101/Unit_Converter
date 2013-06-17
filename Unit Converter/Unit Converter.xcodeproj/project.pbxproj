@@ -13,9 +13,6 @@
 		E70B890D176BFB6D00641364 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E70B890B176BFB6D00641364 /* InfoPlist.strings */; };
 		E70B890F176BFB6D00641364 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E70B890E176BFB6D00641364 /* main.m */; };
 		E70B8913176BFB6D00641364 /* UnitconverterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E70B8912176BFB6D00641364 /* UnitconverterAppDelegate.m */; };
-		E70B8915176BFB6D00641364 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E70B8914176BFB6D00641364 /* Default.png */; };
-		E70B8917176BFB6D00641364 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E70B8916176BFB6D00641364 /* Default@2x.png */; };
-		E70B8919176BFB6D00641364 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E70B8918176BFB6D00641364 /* Default-568h@2x.png */; };
 		E70B892E176C07F000641364 /* TempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E70B892C176C07F000641364 /* TempViewController.m */; };
 		E70B8933176C09F800641364 /* DistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E70B8931176C09F800641364 /* DistViewController.m */; };
 		E70B8938176C0A1A00641364 /* TimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E70B8936176C0A1A00641364 /* TimeViewController.m */; };
@@ -27,9 +24,7 @@
 		E715C0E9176E78F700145FDD /* temp_opt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E715C0E6176E78F700145FDD /* temp_opt.jpg */; };
 		E715C0F1176E813C00145FDD /* unit_converter_opt.png in Resources */ = {isa = PBXBuildFile; fileRef = E715C0F0176E813C00145FDD /* unit_converter_opt.png */; };
 		E715C0F5176E826D00145FDD /* unit_converter_opt_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = E715C0F4176E826D00145FDD /* unit_converter_opt_retina.png */; };
-		E721C6F5176F41C8000C7303 /* default_retina3.5.png in Resources */ = {isa = PBXBuildFile; fileRef = E721C6F4176F41C8000C7303 /* default_retina3.5.png */; };
 		E721C6F6176F41D6000C7303 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E72F588B176F3960002DF6EA /* Default@2x.png */; };
-		E721C6F8176F4239000C7303 /* default_retina4.0.png in Resources */ = {isa = PBXBuildFile; fileRef = E721C6F7176F4239000C7303 /* default_retina4.0.png */; };
 		E72F5888176F3900002DF6EA /* iOS Simulator Screen shot Jun 17, 2013 8.29.38 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = E72F5887176F3900002DF6EA /* iOS Simulator Screen shot Jun 17, 2013 8.29.38 AM.png */; };
 		E72F588A176F391C002DF6EA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E72F5889176F391C002DF6EA /* Default.png */; };
 		E72F588E176F3978002DF6EA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E72F588D176F3978002DF6EA /* Default-568h@2x.png */; };
@@ -47,9 +42,6 @@
 		E70B8910176BFB6D00641364 /* Unit Converter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Unit Converter-Prefix.pch"; sourceTree = "<group>"; };
 		E70B8911176BFB6D00641364 /* UnitconverterAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UnitconverterAppDelegate.h; path = "Unit Converter/UnitconverterAppDelegate.h"; sourceTree = "<group>"; };
 		E70B8912176BFB6D00641364 /* UnitconverterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UnitconverterAppDelegate.m; path = "Unit Converter/UnitconverterAppDelegate.m"; sourceTree = "<group>"; };
-		E70B8914176BFB6D00641364 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		E70B8916176BFB6D00641364 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		E70B8918176BFB6D00641364 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E70B892B176C07F000641364 /* TempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempViewController.h; sourceTree = "<group>"; };
 		E70B892C176C07F000641364 /* TempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempViewController.m; sourceTree = "<group>"; };
 		E70B8930176C09F800641364 /* DistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistViewController.h; sourceTree = "<group>"; };
@@ -64,8 +56,6 @@
 		E715C0E6176E78F700145FDD /* temp_opt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = temp_opt.jpg; sourceTree = "<group>"; };
 		E715C0F0176E813C00145FDD /* unit_converter_opt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unit_converter_opt.png; path = ../unit_converter_opt.png; sourceTree = "<group>"; };
 		E715C0F4176E826D00145FDD /* unit_converter_opt_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unit_converter_opt_retina.png; path = ../unit_converter_opt_retina.png; sourceTree = "<group>"; };
-		E721C6F4176F41C8000C7303 /* default_retina3.5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_retina3.5.png; sourceTree = "<group>"; };
-		E721C6F7176F4239000C7303 /* default_retina4.0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_retina4.0.png; sourceTree = "<group>"; };
 		E72F5887176F3900002DF6EA /* iOS Simulator Screen shot Jun 17, 2013 8.29.38 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS Simulator Screen shot Jun 17, 2013 8.29.38 AM.png"; sourceTree = "<group>"; };
 		E72F5889176F391C002DF6EA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		E72F588B176F3960002DF6EA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
@@ -136,8 +126,6 @@
 		E70B8909176BFB6D00641364 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E721C6F4176F41C8000C7303 /* default_retina3.5.png */,
-				E721C6F7176F4239000C7303 /* default_retina4.0.png */,
 				E72F588D176F3978002DF6EA /* Default-568h@2x.png */,
 				E72F588B176F3960002DF6EA /* Default@2x.png */,
 				E72F5889176F391C002DF6EA /* Default.png */,
@@ -152,9 +140,6 @@
 				E70B890B176BFB6D00641364 /* InfoPlist.strings */,
 				E70B890E176BFB6D00641364 /* main.m */,
 				E70B8910176BFB6D00641364 /* Unit Converter-Prefix.pch */,
-				E70B8914176BFB6D00641364 /* Default.png */,
-				E70B8916176BFB6D00641364 /* Default@2x.png */,
-				E70B8918176BFB6D00641364 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -212,9 +197,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E70B890D176BFB6D00641364 /* InfoPlist.strings in Resources */,
-				E70B8915176BFB6D00641364 /* Default.png in Resources */,
-				E70B8917176BFB6D00641364 /* Default@2x.png in Resources */,
-				E70B8919176BFB6D00641364 /* Default-568h@2x.png in Resources */,
 				E70B893D176C16D200641364 /* TimeViewController.xib in Resources */,
 				E70B893F176C171100641364 /* TempViewController.xib in Resources */,
 				E70B8941176C174D00641364 /* DistViewController.xib in Resources */,
@@ -227,9 +209,7 @@
 				E72F5888176F3900002DF6EA /* iOS Simulator Screen shot Jun 17, 2013 8.29.38 AM.png in Resources */,
 				E72F588A176F391C002DF6EA /* Default.png in Resources */,
 				E72F588E176F3978002DF6EA /* Default-568h@2x.png in Resources */,
-				E721C6F5176F41C8000C7303 /* default_retina3.5.png in Resources */,
 				E721C6F6176F41D6000C7303 /* Default@2x.png in Resources */,
-				E721C6F8176F4239000C7303 /* default_retina4.0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

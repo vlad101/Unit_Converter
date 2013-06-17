@@ -11,9 +11,9 @@
 @interface TempViewController : UIViewController <UITextFieldDelegate>
 {
     // The view objects.
-    IBOutlet UILabel *resultField;
-    IBOutlet UITextField *userInputTextField;
-    IBOutlet UIActivityIndicatorView *activityIndicator;
+    __weak IBOutlet UILabel *resultField;
+    __weak IBOutlet UITextField *userInputTextField;
+    __weak IBOutlet UIActivityIndicatorView *activityIndicator;
 }
 - (IBAction)showButton:(id)sender;
 

@@ -12,7 +12,10 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    // Get a pointer to the application bundle object
+    // self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    NSBundle *appBundle = [NSBundle mainBundle];
+    self = [super initWithNibName:@"DistViewController" bundle:appBundle];
     
     if (self)
     {
@@ -21,10 +24,7 @@
         
         // Give it a label
         [tbi setTitle:@"Distance"];
-        
-        // Set background image.
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"image460x320.jpg"]];
-        
+                
         // Put the image on the tab bar item
         [tbi setFinishedSelectedImage:[UIImage imageNamed:@"dist_opt.jpg"]withFinishedUnselectedImage:[UIImage imageNamed:@"dist_opt.jpg"]];
     }
@@ -39,6 +39,9 @@
     
     // Clear the textField, the X button
     userInputTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    
+    // Set background image.
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"image460x320.jpg"]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -51,7 +54,6 @@
 {
     [super viewDidUnload];
 }
-
 
 // Only allow numbers in the text field.
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string

@@ -12,7 +12,10 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    // Get a pointer to the application bundle object
+    // self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    NSBundle *appBundle = [NSBundle mainBundle];
+    self = [super initWithNibName:@"TimeViewController" bundle:appBundle];
     
     if (self)
     {
@@ -21,10 +24,7 @@
         
         // Give it a label
         [tbi setTitle:@"Time"];
-        
-        // Set a background image.
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"image460x320.jpg"]];
-        
+                
         // Put the image on the tab bar item
         [tbi setFinishedSelectedImage:[UIImage imageNamed:@"time_opt.jpg"]withFinishedUnselectedImage:[UIImage imageNamed:@"time_opt.jpg"]];
     }
@@ -39,6 +39,9 @@
     
     // Clear the textField, the X button
     userInputTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    
+    // Set a background image.
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"image460x320.jpg"]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

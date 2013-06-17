@@ -12,7 +12,10 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    // Get a pointer to the application bundle object
+    // self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    NSBundle *appBundle = [NSBundle mainBundle];
+    self = [super initWithNibName:@"TempViewController" bundle:appBundle];
     
     if (self)
     {
@@ -21,9 +24,6 @@
         
         // Give it a label
         [tbi setTitle:@"Temperature"];
-        
-        // Set background image.
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"image460x320.jpg"]];
         
         // Put the image on the tab bar item
         [tbi setFinishedSelectedImage:[UIImage imageNamed:@"temp_opt.jpg"]withFinishedUnselectedImage:[UIImage imageNamed:@"temp_opt.jpg"]];
@@ -39,6 +39,9 @@
     
     // Clear the textField, the X button
     userInputTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    
+    // Set background image.
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"image460x320.jpg"]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -46,12 +49,11 @@
     [super viewWillAppear:animated];
 }
 
-// Set variables to nil if needed [timeLabel]
+// Set variables to nil if needed
 - (void)viewDidUnload
 {
     [super viewDidUnload];
 }
-
 
 // Only allow numbers in the text field.
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
