@@ -197,4 +197,13 @@
     [UIView commitAnimations];
 }
 
+// Set the device for autorotation - right-side up, landscape left, and landscape right
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)orientation
+{
+    // Return YES if incoming orientation is Portrait or either of the landscapes
+    // otherwise, return NO
+    return (orientation == UIInterfaceOrientationPortrait)
+    || UIDeviceOrientationIsLandscape(orientation);
+}
+
 @end

@@ -21,6 +21,22 @@
     
     // Override point for customization after application launch.
     
+    // Set the notifications
+    // Get the device object.
+    UIDevice *device = [UIDevice currentDevice];
+    
+    // Start monitoring the accelometer for orientation
+    [device beginGeneratingDeviceOrientationNotifications];
+    
+    // Get the notification center for the app
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    
+    // Add yourself as an observer
+    [nc addObserver:self
+           selector:@selector(orientationChanged:)
+               name:UIDeviceOrientationDidChangeNotification
+             object:device];
+    
     // Create three instances of the three view controllers.
     TempViewController *tempvc = [[TempViewController alloc] init];
     DistViewController *distvc = [[DistViewController alloc] init];
@@ -39,6 +55,14 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+// When device's orientation changes, the message orientationChanged: will be sent
+// to the instance of RotationAppDelegate
+- (void)orientationChanged:(NSNotification *)note
+{
+    // Log the constant that represents the current orientation
+    NSLog(@"orientationChanged: %d", [[note object] orientation]);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
