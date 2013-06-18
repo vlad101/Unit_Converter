@@ -7,6 +7,7 @@
 //
 
 #import "TempViewController.h"
+#import <QuartzCore/QuartzCore.h>
 #pragma mark -
 #pragma mark PickerView DataSource
 
@@ -44,11 +45,55 @@
     
     // Set background image.
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"image460x320.jpg"]];
-    
+        
     // The UIPicker data initialization
-    units = [[NSArray alloc] initWithObjects:@"nm", @"dm", @"km", nil];
-    conversionFactors = [[NSArray alloc] initWithObjects:[NSNumber numberWithFloat:1E-9], [NSNumber numberWithFloat:1E1], [NSNumber numberWithFloat:1E-3], nil];
+    units = [[NSArray alloc] initWithObjects:@"C",
+                                            @"F",
+                                            @"K",
+                                            nil];
+}
+
+- (void)displayResult:(float)input
+{
+    // Set border and background color around resultField, import QuartzCore Framework
+    resultField.layer.backgroundColor = [UIColor whiteColor].CGColor;
+    resultField.layer.borderColor = [UIColor blueColor].CGColor;
+    resultField.layer.borderWidth = 3.0;
     
+    // Conversion from Pm to all other units
+    if([picker selectedRowInComponent:0] == 0)
+    {
+        if([picker selectedRowInComponent:1] == 0)
+            conversionFactor = input;
+        else if([picker selectedRowInComponent:1] == 1)
+            conversionFactor = (input * 9/5) + 32;
+        else
+            conversionFactor = input + 273.15;
+    }
+    
+    // Conversion from Tm to all other units
+    else if([picker selectedRowInComponent:0] == 1)
+    {
+        if([picker selectedRowInComponent:1] == 0)
+            conversionFactor = (input - 32) * (5.0/9.0);
+        else if([picker selectedRowInComponent:1] == 1)
+            conversionFactor = input;
+        else
+            conversionFactor = ((input - 32) * (5.0/9.0)) + 273.15;
+    }
+    
+    // Conversion from Gm to all other units
+    else if([picker selectedRowInComponent:0] == 2)
+    {
+        if([picker selectedRowInComponent:1] == 0)
+            conversionFactor = input - 273.15;
+        else if([picker selectedRowInComponent:1] == 1)
+            conversionFactor = ((input - 273.15) * 9/5) + 32;
+        else
+            conversionFactor = input;
+    }
+        
+    [resultField setText:[NSString stringWithFormat:@"%.3f %@ = %.3e %@!", input, [units objectAtIndex:[picker selectedRowInComponent:0]], conversionFactor, [units objectAtIndex:[picker selectedRowInComponent:1]]]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -61,7 +106,6 @@
 {
     [super viewDidUnload];
     units = nil;
-    conversionFactors = nil;
 }
 
 // Only allow numbers in the text field.
@@ -73,9 +117,14 @@
 }
 
 // The UIPickerView method implementation
+-(CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
+{
+    return 90;
+}
+
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
@@ -90,28 +139,25 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    NSLog(@"row: %d", row);
-    conversionFactor = [[conversionFactors objectAtIndex:row] floatValue];
+    NSLog(@"row: %d component: %d", row, component);
     inputValue = [userInputTextField.text floatValue];
     resultUnit = [units objectAtIndex:row];
 }
 
 - (IBAction)showResult:(id)sender
 {
-    // Activity indicator start animation
-    [activityIndicator startAnimating];
-    
-    // Display the result
-    //NSString *str = [userInputTextField text];
-    //double value = [str doubleValue];
     [resultField setFont:[UIFont systemFontOfSize:18]];
     
-    if(resultUnit == nil)
-            [resultField setText:[NSString stringWithFormat:@"%.3f m = %.3e nm!", [[userInputTextField text] floatValue], [[userInputTextField text] floatValue] * 1E-9]];
-    else
-        [resultField setText:[NSString stringWithFormat:@"%.3f m = %.3e %@!", inputValue, inputValue * conversionFactor, resultUnit]];
+    if([picker selectedRowInComponent:0] == 0)
+    {
+        inputValue = [userInputTextField.text floatValue];
+        resultUnit = [units objectAtIndex:0];
+    }
     
-    // Activity indicator stop animation
+    // Display the result.
+    [self displayResult:inputValue];
+    
+    // Activity indicator stop animation.
     [activityIndicator stopAnimating];
 }
 
@@ -221,10 +267,7 @@
         NSLog(@"%@", view);
         
         if([view isKindOfClass:[UITabBar class]])
-        {
             [view setFrame:CGRectMake(view.frame.origin.x, 431, view.frame.size.width, view.frame.size.height)];
-            
-        }
         else
         {
             [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, 431)];

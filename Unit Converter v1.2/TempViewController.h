@@ -18,14 +18,14 @@
     
     // The UIPickerView
     NSArray *units;
-    NSArray *conversionFactors;
-    __weak IBOutlet UIPickerView *picker;
-    float conversionFactor;
+    IBOutlet UIPickerView *picker;
     float inputValue;
     NSString *resultUnit;
+    float conversionFactor;
 }
 - (IBAction)showButton:(id)sender;
 - (IBAction)hideButton:(id)sender;
 - (IBAction)showResult:(id)sender;
+- (void)displayResult:(float)input;
 
 @end

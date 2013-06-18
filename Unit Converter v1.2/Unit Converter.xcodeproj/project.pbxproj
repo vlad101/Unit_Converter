@@ -25,6 +25,7 @@
 		E715C0F1176E813C00145FDD /* unit_converter_opt.png in Resources */ = {isa = PBXBuildFile; fileRef = E715C0F0176E813C00145FDD /* unit_converter_opt.png */; };
 		E715C0F5176E826D00145FDD /* unit_converter_opt_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = E715C0F4176E826D00145FDD /* unit_converter_opt_retina.png */; };
 		E721C6F6176F41D6000C7303 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E72F588B176F3960002DF6EA /* Default@2x.png */; };
+		E721C6FA176FD5B9000C7303 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E721C6F9176FD5B9000C7303 /* QuartzCore.framework */; };
 		E72F5888176F3900002DF6EA /* iOS Simulator Screen shot Jun 17, 2013 8.29.38 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = E72F5887176F3900002DF6EA /* iOS Simulator Screen shot Jun 17, 2013 8.29.38 AM.png */; };
 		E72F588A176F391C002DF6EA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E72F5889176F391C002DF6EA /* Default.png */; };
 		E72F588E176F3978002DF6EA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E72F588D176F3978002DF6EA /* Default-568h@2x.png */; };
@@ -56,6 +57,7 @@
 		E715C0E6176E78F700145FDD /* temp_opt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = temp_opt.jpg; sourceTree = "<group>"; };
 		E715C0F0176E813C00145FDD /* unit_converter_opt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unit_converter_opt.png; path = ../unit_converter_opt.png; sourceTree = "<group>"; };
 		E715C0F4176E826D00145FDD /* unit_converter_opt_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unit_converter_opt_retina.png; path = ../unit_converter_opt_retina.png; sourceTree = "<group>"; };
+		E721C6F9176FD5B9000C7303 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E72F5887176F3900002DF6EA /* iOS Simulator Screen shot Jun 17, 2013 8.29.38 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS Simulator Screen shot Jun 17, 2013 8.29.38 AM.png"; sourceTree = "<group>"; };
 		E72F5889176F391C002DF6EA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		E72F588B176F3960002DF6EA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E721C6FA176FD5B9000C7303 /* QuartzCore.framework in Frameworks */,
 				E70B8903176BFB6D00641364 /* UIKit.framework in Frameworks */,
 				E70B8905176BFB6D00641364 /* Foundation.framework in Frameworks */,
 				E70B8907176BFB6D00641364 /* CoreGraphics.framework in Frameworks */,
@@ -108,6 +111,7 @@
 		E70B8901176BFB6D00641364 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E721C6F9176FD5B9000C7303 /* QuartzCore.framework */,
 				E70B8902176BFB6D00641364 /* UIKit.framework */,
 				E70B8904176BFB6D00641364 /* Foundation.framework */,
 				E70B8906176BFB6D00641364 /* CoreGraphics.framework */,
