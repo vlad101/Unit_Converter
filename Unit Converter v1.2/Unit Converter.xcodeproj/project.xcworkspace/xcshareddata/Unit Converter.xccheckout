@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FF0D127B-03BE-4058-A6A6-0DAABCA7BC52</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Unit Converter</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A48CC5C2-DD1A-48A3-80A9-6AF3B3CD1BF5</key>
+		<string>https://github.com/vlad101/Unit_Converter.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Unit Converter v1.2/Unit Converter.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A48CC5C2-DD1A-48A3-80A9-6AF3B3CD1BF5</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/vlad101/Unit_Converter.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A48CC5C2-DD1A-48A3-80A9-6AF3B3CD1BF5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A48CC5C2-DD1A-48A3-80A9-6AF3B3CD1BF5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Unit_Converter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
